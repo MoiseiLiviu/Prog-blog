@@ -1,0 +1,8 @@
+---
+layout: page
+permalink: /contact/
+title: Contact
+---
+
+<p style='border-top:thin solid brown;padding-right:100px;padding-top:40px;font-size:23px;letter-spacing:1px'>Best way of contacting me for a fast response is by email <a>lmoisei@list.ru</a>. You can also hit me up on twitter or facebook for any quesions/suggestions ;)</p>
+

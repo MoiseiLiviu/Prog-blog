@@ -1,0 +1,52 @@
+---
+layout: default
+---
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting" style="margin-top: 100px;">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" style="margin-left: auto;margin-right: auto;margin-bottom: 15px;" itemprop="name headline">{{ page.title | escape }}</h1>
+    {%for category in page.categories%}
+    <a href="/categories/{{category}}" style="padding: 8px;background-color: whitesmoke;border-radius: 3px;margin-right: 15px;">{{category}}</a>
+    {%endfor%}
+    <p class="post-meta" style="margin-top: 20px;">
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {{ page.date | date: date_format }}
+      </time>
+      {%- if page.modified_date -%}
+        ~ 
+        {%- assign mdate = page.modified_date | date_to_xmlschema -%}
+        <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
+          {{ mdate | date: date_format }}
+        </time>
+      {%- endif -%}
+      {%- if page.author -%}
+        • {% for author in page.author %}
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
+            {%- if forloop.last == false %}, {% endif -%}
+        {% endfor %}
+      {%- endif -%}</p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody" style="display: flex;flex-direction: column;">
+    <span style='font-size:30px;font-weight:bold'>Problem statement:</span>
+    <p class="post-text">{{page.statement}}</p>
+    <span style='font-size:30px;font-weight:bold'>Input:</span>
+    <p class="post-text">{{page.input}}</p>
+    <span style='font-size:30px;font-weight:bold'>Output:</span>
+    <p class="post-text">{{page.Output}}</p>
+    <span style='font-size:30px;font-weight:bold'>Explanation:</span>
+    <p class="post-text">{{page.explanation}}</p>
+    <span style='font-size:30px;font-weight:bold'>Problem link:</span>
+    <a href={{page.link}}>{{page.link}}</a>
+    {{ content }}
+  </div>
+
+  {%- if site.disqus.shortname -%}
+    {%- include disqus_comments.html -%}
+  {%- endif -%}
+
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>
+<link href="/css/style.css" rel="stylesheet" >

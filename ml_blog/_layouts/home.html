@@ -1,0 +1,67 @@
+---
+layout: default
+---
+<!-- Just some nice to have styles for the pager buttons -->
+<style>
+  ul.pager { text-align: center; list-style: none; }
+  ul.pager li {display: inline;border: 1px solid black; padding: 10px; margin: 5px;}
+</style>
+
+<div>
+
+  <h1 style="border-bottom: thin solid brown;margin-bottom: 25px;margin-top: 60px;letter-spacing: 3px;font-size: 40px;">Home</h1>
+  <p style="font-size: 23px;letter-spacing: 1px;">I like solving problems and building things</p>
+  <p style="font-size: 23px;letter-spacing: 1px;">Click <a href="/css/Resume.pdf">here</a> to get my resume or click <a href="/contact/">contact</a> to hit me up.</p>
+
+  <h1 class="page-heading" style="margin-top: 60px;margin-bottom: 50px;">My latest blogs:</h1>
+  
+  {{ content }}
+ <div class="home-content" style="display: flex;justify-content: space-between;flex-wrap: wrap;">
+  <ul class="post-list"  >
+    <!-- 
+        Here is the main paginator logic called.
+        All calls to site.posts should be replaced by paginator.posts 
+    -->
+    {% for post in paginator.posts %}
+      <li style="border-bottom:thin solid gray;padding-bottom: 15px;">
+
+        <h2>
+          <a style="font-size: 35px;" class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </h2>
+        <span class="post-meta" style="margin-right: 15px;">{{ post.date | date: "%b %-d, %Y" }}</span>
+        {% for category in post.categories %}
+    <a href="/categories/{{category}}" style="font-size: 17px;padding: 6px;border-radius: 3px;background-color: whitesmoke;margin-right: 15px;">{{category}}</a>
+    {% endfor %}
+      </li>
+    {% endfor %}
+  </ul>
+  <div id="archives">
+    <h2 style="font-size: 32px;">Categories:</h2>
+    {% for category in site.categories %}
+      <div class="archive-group" style="font-size: 24px;">
+        {% capture category_name %}{{ category | first }}{% endcapture %}
+        <div id="#{{ category_name | slugize }}"></div>    
+        <a href="/categories/{{category_name}}.html" class="category-head">{{ category_name }}</a>
+      
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+  <!-- 
+    Showing buttons to move to the next and to the previous list of posts (pager buttons).
+  -->
+  {% if paginator.total_pages > 1 %}
+  <ul class="pager">
+      {% if paginator.previous_page %}
+      <li class="previous">
+          <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+      </li>
+      {% endif %}
+      {% if paginator.next_page %}
+      <li class="next">
+          <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+      </li>
+      {% endif %}
+  </ul>
+  {% endif %}
+</div>
