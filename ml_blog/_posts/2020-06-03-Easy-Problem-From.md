@@ -6,10 +6,12 @@ input: There are several test cases. The  rst line of each test case contains tw
 Output: For each query, print the 1-based location of the occurrence. If there is no such element, output `0'instead.
 explanation: The input is to big to just iterate and mantain a counter for each querry, so a better way is maintaining the index for each encounter in a map where the key is a number from the array and the value is another map where the key is the k occurence of the number and the value is the coresponding index.So after reading the input we can fetch the indeces map[v][k].
 link: https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&problem=3142
+categories: Map
 ---
 
 <span style='font-size:20px;font-weight:bold'>My code:</span>
 
+{%highlight c++ linenos%}
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -33,3 +35,4 @@ int main(int argc, char **argv)
 	
 	return 0;
 }
+{%endhighlight%}
