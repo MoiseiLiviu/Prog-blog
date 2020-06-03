@@ -1,0 +1,26 @@
+I"W<p><span style="font-size:20px;font-weight:bold">My code:</span></p>
+
+<p>#include &lt;bits/stdc++.h&gt;
+using namespace std;</p>
+
+<p>int main(int argc, char **argv)
+{
+	int n,m;
+	while(!(cin»n»m).eof()){
+		map&lt;int,map&lt;int,int» occ;
+		int value,k,v;
+		for(int i = 0;i&lt;n;i++){
+			cin»value;
+			occ[value][occ[value].size()+1]=i;
+			}
+	    while(m–){
+			cin»k»v;
+			int ind = occ[v][k];
+			ind = ind==0?0:ind+1;
+			cout«ind«endl;
+			}
+		}</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>return 0; }
+</code></pre></div></div>
+:ET
