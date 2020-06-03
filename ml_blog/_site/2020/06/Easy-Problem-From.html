@@ -9,15 +9,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="My code:" />
 <meta property="og:description" content="My code:" />
-<link rel="canonical" href="http://localhost:4000/2020/06/Easy-Problem-From.html" />
-<meta property="og:url" content="http://localhost:4000/2020/06/Easy-Problem-From.html" />
+<link rel="canonical" href="/2020/06/Easy-Problem-From.html" />
+<meta property="og:url" content="/2020/06/Easy-Problem-From.html" />
 <meta property="og:site_name" content="ML prog-blog" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-06-03T00:00:00+03:00" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","headline":"11991 - Easy Problem from Rujia Liu?","dateModified":"2020-06-03T00:00:00+03:00","datePublished":"2020-06-03T00:00:00+03:00","url":"http://localhost:4000/2020/06/Easy-Problem-From.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2020/06/Easy-Problem-From.html"},"description":"My code:","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"11991 - Easy Problem from Rujia Liu?","dateModified":"2020-06-03T00:00:00+03:00","datePublished":"2020-06-03T00:00:00+03:00","url":"/2020/06/Easy-Problem-From.html","mainEntityOfPage":{"@type":"WebPage","@id":"/2020/06/Easy-Problem-From.html"},"description":"My code:","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="ML prog-blog" /></head>
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="ML prog-blog" /></head>
 <body><header class="site-header">
 
   <div class="wrapp"><a class="site-title" href="/"><img style="width: 35px;height: auto;margin-right: 20px;" src="https://img.icons8.com/dusk/64/000000/computer.png"/>ML prog-blog</a><nav class="site-nav">
@@ -47,6 +47,8 @@
   <header class="post-header">
     <h1 class="post-title p-name" style="margin-left: auto;margin-right: auto;margin-bottom: 15px;" itemprop="name headline">11991 - Easy Problem from Rujia Liu?</h1>
     
+    <a href="/categories/Map" style="padding: 8px;background-color: whitesmoke;border-radius: 3px;margin-right: 15px;">Map</a>
+    
     <p class="post-meta" style="margin-top: 20px;"><time class="dt-published" datetime="2020-06-03T00:00:00+03:00" itemprop="datePublished">
         Jun 3, 2020
       </time></p>
@@ -65,29 +67,53 @@
     <a href=https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&problem=3142>https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&problem=3142</a>
     <p><span style="font-size:20px;font-weight:bold">My code:</span></p>
 
-<p>#include &lt;bits/stdc++.h&gt;
-using namespace std;</p>
+<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+</pre></td><td class="code"><pre><span class="cp">#include &lt;bits/stdc++.h&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
-<p>int main(int argc, char **argv)
-{
-	int n,m;
-	while(!(cin»n»m).eof()){
-		map&lt;int,map&lt;int,int» occ;
-		int value,k,v;
-		for(int i = 0;i&lt;n;i++){
-			cin»value;
-			occ[value][occ[value].size()+1]=i;
-			}
-	    while(m–){
-			cin»k»v;
-			int ind = occ[v][k];
-			ind = ind==0?0:ind+1;
-			cout«ind«endl;
-			}
-		}</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>return 0; }
-</code></pre></div></div>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="kt">int</span> <span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">;</span>
+	<span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">n</span><span class="o">&gt;&gt;</span><span class="n">m</span><span class="p">).</span><span class="n">eof</span><span class="p">()){</span>
+		<span class="n">map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="n">map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">occ</span><span class="p">;</span>
+		<span class="kt">int</span> <span class="n">value</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="p">;</span>
+		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+			<span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">value</span><span class="p">;</span>
+			<span class="n">occ</span><span class="p">[</span><span class="n">value</span><span class="p">][</span><span class="n">occ</span><span class="p">[</span><span class="n">value</span><span class="p">].</span><span class="n">size</span><span class="p">()</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">i</span><span class="p">;</span>
+			<span class="p">}</span>
+	    <span class="k">while</span><span class="p">(</span><span class="n">m</span><span class="o">--</span><span class="p">){</span>
+			<span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">k</span><span class="o">&gt;&gt;</span><span class="n">v</span><span class="p">;</span>
+			<span class="kt">int</span> <span class="n">ind</span> <span class="o">=</span> <span class="n">occ</span><span class="p">[</span><span class="n">v</span><span class="p">][</span><span class="n">k</span><span class="p">];</span>
+			<span class="n">ind</span> <span class="o">=</span> <span class="n">ind</span><span class="o">==</span><span class="mi">0</span><span class="o">?</span><span class="mi">0</span><span class="o">:</span><span class="n">ind</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+			<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">ind</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+	
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
   </div><a class="u-url" href="/2020/06/Easy-Problem-From.html" hidden></a>
 </article>
