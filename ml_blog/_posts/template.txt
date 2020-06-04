@@ -5,6 +5,7 @@ input:
 Output:
 explanation:
 link:
+categories:
 ---
 
 <span style='font-size:20px;font-weight:bold'>My code:</span>

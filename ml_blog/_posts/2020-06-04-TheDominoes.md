@@ -5,6 +5,7 @@ input: The input will consist of a series of problems, with each problem describ
 Output: For each problem in the input a line is written, with `YES' if the problem has a solution, and `NO' if ithas no solution.
 explanation: The problem is solvable with backtracking.Starting from the left domino piece we iterate over all the possible pieces that can be concatinated and for each of them do the same process until all the n places are filled, at that point we check if the last piece is compatible with the right extreme, if it is then set the 'possible' boolean to true;
 link: https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&problem=1444
+categories: Backtracking
 ---
 
 <span style='font-size:20px;font-weight:bold'>My code:</span>
