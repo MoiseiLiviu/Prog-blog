@@ -1,0 +1,13 @@
+---
+layout: post
+statement:
+input:
+Output:
+explanation:
+link:
+---
+
+<span style='font-size:20px;font-weight:bold'>My code:</span>
+
+{%highlight c++ linenos%}
+{%endhighlight%}
