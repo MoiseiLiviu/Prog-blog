@@ -13,31 +13,53 @@ link: https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_pr
   <span style='font-size:20px;font-weight:bold'>My code:</span>
 {%highlight c++ linenos%}
 
-  #include <bits/stdc++.h>
+ #include <bits/stdc++.h>
 using namespace std;
 
-int main(int argc, char **argv)
-{
-	
-	int k;
-	while(!(cin>>k).eof()){
-		vector<pair<int,int>> pairs;
-		double dk = k;
-		for(int x = 1;x<=20000;x++){
-			for(int y = 1;y<=x;y++){
-				double temp = ((double)x*y)/(x+y);
-				if(temp>dk)break;
-				if(temp==dk)pairs.push_back(make_pair(x,y));
+int row[8];
+vector<int> v;
+int MIN;
+
+bool place(int c,int r){
+	for(int i = 0;i<c;i++){
+		if(row[i]==r||abs(c-i)==abs(row[i]-r))return false;
+		}
+	return true;
+	}
+void backtracking(int c){
+	if(c==8){
+		int delta = 0;
+		for(int i = 0;i<8;i++){
+			cout<<row[i]<<" ";
+			if(v[i]!=row[i])delta++;
+			}
+			cout<<endl;
+			MIN=min(MIN,delta);
+		}
+	else{
+		for(int r = 0;r<8;r++){
+			if(place(c,r)){
+				row[c]=r;
+				backtracking(c+1);
 				}
 			}
-			cout<<pairs.size()<<endl;
-			sort(pairs.begin(),pairs.end(),[](auto &p1,auto &p2){
-				if(p1.first==p2.first)return p1.second>p2.second;
-				else return p1.first>p2.first;
-				});
-			for(const auto cell : pairs){
-				printf("1/%d = 1/%d + 1/%d\n",k,cell.first,cell.second);
-				}
+		}
+	}
+int main(int argc, char **argv)
+{
+	int k,tc=1;
+	while(cin>>k){
+		MIN = 100;
+        v.clear();
+		v.push_back(k-1);
+		for(int i = 0;i<7;i++){
+			cin>>k;
+			v.push_back(k-1);
+			}
+			for(auto cell : v)cout<<cell<<" ";
+			cout<<endl;
+		backtracking(0);
+		printf("Case %d: %d\n",tc++,MIN);
 		}
 	return 0;
 }
