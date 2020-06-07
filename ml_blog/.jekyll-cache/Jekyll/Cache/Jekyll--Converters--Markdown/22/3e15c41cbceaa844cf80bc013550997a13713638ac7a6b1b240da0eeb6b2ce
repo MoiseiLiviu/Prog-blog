@@ -1,0 +1,12 @@
+I"k<div>
+<h2 style="padding: 2px;">Binary search</h2>
+<ul class="post-list" style="margin-top: 100px;">
+    <!-- 
+        Here is the main paginator logic called.
+        All calls to site.posts should be replaced by paginator.posts 
+    -->
+    
+      <li style="border-bottom:thin solid black;">
+        <span class="post-meta">Jun 7, 2020</span>
+</li></ul></div>
+:ET
