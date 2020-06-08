@@ -12,5 +12,34 @@ categories: Greedy
 <span style='font-size:20px;font-weight:bold'>My code:</span>
 
 {%highlight c++ linenos%}
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int c,s;
+
+int main(int argc, char **argv)
+{
+	int tc = 1;
+	while(cin>>c>>s){
+		vector<int> v(2*c,0);
+		double sum = 0;
+		for(int i =0;i<s;i++){
+		    cin>>v[i];
+		    sum+=v[i];
+		}
+		double AM = sum/c,IMB = 0.0;
+		sort(v.begin(),v.end());
+		printf("Set #%d\n",tc++);
+		for(int i = 0;i<c;i++){
+			cout<<" "<<i<<":"<<" "<<((v[i]==0)?"":to_string(v[i])+" ")<<((v[c*2-1-i]==0)?"":to_string(v[c*2-1-i]))<<endl;
+			IMB+=abs(v[c*2-1-i]+v[i]-AM);
+			}
+	    printf("IMBALANCE = %.5lf\n\n",IMB);
+	}
+	return 0;
+}
+
+
 {%endhighlight%}
 
