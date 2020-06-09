@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>11292 - Dragon of Loowater | ML prog-blog</title>
+<meta name="generator" content="Jekyll v4.1.0" />
+<meta property="og:title" content="11292 - Dragon of Loowater" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="My code:" />
+<meta property="og:description" content="My code:" />
+<link rel="canonical" href="/2020/06/LoowaterDragon.html" />
+<meta property="og:url" content="/2020/06/LoowaterDragon.html" />
+<meta property="og:site_name" content="ML prog-blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-06-09T00:00:00+03:00" />
+<script type="application/ld+json">
+{"headline":"11292 - Dragon of Loowater","dateModified":"2020-06-09T00:00:00+03:00","datePublished":"2020-06-09T00:00:00+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/2020/06/LoowaterDragon.html"},"url":"/2020/06/LoowaterDragon.html","description":"My code:","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="ML prog-blog" /></head>
+<body><header class="site-header">
+  <link rel="icon" type="image/gif" href="https://img.icons8.com/fluent/48/000000/source-code.png" />
+  <div class="wrapp"><a class="site-title" href="/"><img style="height: 32px;width: 32px;margin-right: 15px;" src="https://img.icons8.com/dusk/64/000000/hacker.png"/>ML prog-blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger" style="margin-right: 40px;">
+          
+            <a class="page-link" href="/about/">About</a>
+            <a class="page-link" href="/contact/">Contact</a>
+            <a class="page-link" href="https://github.com/MoiseiLiviu?tab=repositories">Latest projects</a>
+            <a class="page-link" href="/categories/">Categories</a>
+        </div>
+      </nav></div>
+</header>
+
+<link rel="stylesheet" type="text/css" href="/css/style.css"><main class="page-content" aria-label="Content">
+      <div class="contents" style="margin-left: auto;margin-right: auto;">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting" style="margin-top: 100px;">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" style="margin-left: auto;margin-right: auto;margin-bottom: 15px;" itemprop="name headline">11292 - Dragon of Loowater</h1>
+    
+    <a href="/categories/Greedy" style="padding: 8px;background-color: whitesmoke;border-radius: 3px;margin-right: 15px;">Greedy</a>
+    
+    <p class="post-meta" style="margin-top: 20px;"><time class="dt-published" datetime="2020-06-09T00:00:00+03:00" itemprop="datePublished">
+        Jun 9, 2020
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody" style="display: flex;flex-direction: column;">
+    <span style='font-size:30px;font-weight:bold'>Problem statement:</span>
+    <p class="post-text">Once upon a time, in the Kingdom of Loowater, a minor nuisance turned into a major problem.The  shores  of  Rellau Creek in central Loowater had always been a prime breeding ground for geese.Due to the lack of predators,the geese population was out of control.  The people of Loowater mostly kept clear of the geese.  Occasionally,a goose would attack one of the people, and perhaps bite off a finger or two, but in general, the people tolerated the geese as a minor nuisance.One day,  a freak mutation  occurred,  and  one of  the  geese  spawned  amulti-headed   fire-breathing dragon.  When the dragon grew up, he threatened to burn the Kingdom of Loowater to a crisp.Loowater had a major problem. The king was alarmed, and called on his knights to slay the dragon and save the kingdom.The knights explained :\To slay the dragon, we must chop off all its heads. Each knight can chopoff one of the dragon's heads. The heads of the dragon are of different sizes. In order to chop off ahead, a knight must be at least as tall as the diameter of the head. The knights' union demands that for chopping off a head, a knight must be paid a wage equal to one gold coin for each centimetre of the knight's height."Would there be enough knights to defeat the dragon? The king called on his advisors to help him decide how many and which knights to hire. After having lost a lot of money building Mir Park, the king wanted to minimize the expense of slaying the dragon. As one of the advisors, your job was to help the king. You took it very seriously :if you failed, you and the whole kingdom would be burnt to a crisp!</p>
+    <span style='font-size:30px;font-weight:bold'>Input:</span>
+    <p class="post-text">The input contains several test cases. The first line of each test case contains two integers between 1 and 20000 inclusive, indicating the number n of heads that the dragon has, and the number m of knights in the kingdom. The next n lines each contain an integer, and give the diameters of the dragon's heads,in centimetres. The following m lines each contain an integer, and specify the heights of the knights of Loowater, also in centimetres.The last test case is followed by a line containing `0 0'.</p>
+    <span style='font-size:30px;font-weight:bold'>Output:</span>
+    <p class="post-text">For each test case, output a line containing the minimum number of gold coins that the king needs topay to slay the dragon. If it is not possible for the knights of Loowater to slay the dragon, output the line `Loowater is doomed!'.</p>
+    <span style='font-size:30px;font-weight:bold'>Explanation:</span>
+    <p class="post-text">My idea was to create 2 vectors, one for the knights height and one for the diameters and then to sort them both.After that to try to pair each diameter with a knight in increasing order of their values, so starting from dragon 0 i start my search from knight 0 and iterate over the knights vector until one with a big enough height is found, add the height to the total sum and go to the next dragon and do the same process starting from the i+1 knight where i is the last chosen knight.At each iteration inside the knights vector i check if there are enough knights remaining to slay all the dragons, if not -> break out of the loop and print 'Loowater is doomed!'.</p>
+    <span style='font-size:30px;font-weight:bold'>Problem link:</span>
+    <a href=https://onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=2267>https://onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=2267</a>
+    <p><span style="font-size:20px;font-weight:bold">My code:</span></p>
+
+<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+</pre></td><td class="code"><pre><span class="cp">#include &lt;bits/stdc++.h&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">while</span><span class="p">((</span><span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">n</span><span class="o">&gt;&gt;</span><span class="n">m</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="n">n</span><span class="o">&amp;&amp;</span><span class="n">m</span><span class="p">){</span>
+		<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">v</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+		<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">v1</span><span class="p">(</span><span class="n">m</span><span class="p">);</span>
+		<span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="n">cell</span> <span class="o">:</span> <span class="n">v</span><span class="p">)</span><span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">cell</span><span class="p">;</span>
+		<span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="n">cell</span> <span class="o">:</span> <span class="n">v1</span><span class="p">)</span><span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">cell</span><span class="p">;</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">m</span><span class="o">&lt;</span><span class="n">n</span><span class="p">){</span>
+			<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"Loowater is doomed!"</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+			<span class="k">continue</span><span class="p">;</span>
+			<span class="p">}</span>
+		<span class="n">sort</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">v</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+		<span class="n">sort</span><span class="p">(</span><span class="n">v1</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">v1</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+		<span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="kt">bool</span> <span class="n">possible</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+			<span class="k">if</span><span class="p">(</span><span class="n">possible</span><span class="p">)</span>
+			<span class="k">for</span><span class="p">(;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">m</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+				<span class="k">if</span><span class="p">(</span><span class="n">v1</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">&gt;=</span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]){</span>
+					<span class="n">ans</span><span class="o">+=</span><span class="n">v1</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+					<span class="n">j</span><span class="o">++</span><span class="p">;</span>
+					<span class="k">break</span><span class="p">;</span>
+					<span class="p">}</span>
+					<span class="k">if</span><span class="p">(</span><span class="n">m</span><span class="o">-</span><span class="n">j</span><span class="o">&lt;=</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="p">){</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"Loowater is doomed!"</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span><span class="n">possible</span><span class="o">=</span> <span class="nb">false</span><span class="p">;</span><span class="k">break</span><span class="p">;}</span>
+				<span class="p">}</span>
+			<span class="p">}</span>
+			<span class="k">if</span><span class="p">(</span><span class="n">possible</span><span class="p">)</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">ans</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+
+  </div><a class="u-url" href="/2020/06/LoowaterDragon.html" hidden></a>
+</article>
+<link href="/css/style.css" rel="stylesheet" >
+      </div>
+    </main><footer id="footer">
+    <p>Copyright &copy; 2020 <a href="/">ML prog-blog</a> &nbsp;
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+            <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"/>
+        </a>
+    </p>
+    <p>Powered by
+        <a href="https://github.com/jekyll/jekyll">Jekyll</a> 
+    </p>
+    <p>Last updated 2020/05/30</p>
+    <p id="footer-social-links">
+        <a href="">
+            <span class="px-2 fab fa-lg fa-twitter"></span>
+        </a>
+        <a href="">
+            <span class="px-2 fab fa-lg fa-github"></span>
+        </a>
+        <a href="">
+            <span class="px-2 fab fa-lg fa-linkedin"></span>
+        </a>
+    </p>
+</footer></body>
+
+</html>
