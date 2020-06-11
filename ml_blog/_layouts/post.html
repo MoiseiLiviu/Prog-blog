@@ -30,16 +30,16 @@ layout: default
   </header>
 
   <div class="post-content e-content" itemprop="articleBody" style="display: flex;flex-direction: column;">
-    <span style='font-size:30px;font-weight:bold'>Problem statement:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Problem link:</span>
+    <a style='margin-bottom: 20px;' href={{page.link}}>{{page.link}}</a>   
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Problem statement:</span>
     <p class="post-text">{{page.statement}}</p>
-    <span style='font-size:30px;font-weight:bold'>Input:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Input:</span>
     <p class="post-text">{{page.input}}</p>
-    <span style='font-size:30px;font-weight:bold'>Output:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Output:</span>
     <p class="post-text">{{page.Output}}</p>
-    <span style='font-size:30px;font-weight:bold'>Explanation:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Explanation:</span>
     <p class="post-text">{{page.explanation}}</p>
-    <span style='font-size:30px;font-weight:bold'>Problem link:</span>
-    <a href={{page.link}}>{{page.link}}</a>
     {{ content }}
   </div>
 

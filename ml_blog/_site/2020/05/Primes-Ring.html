@@ -15,7 +15,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-28T00:00:00+03:00" />
 <script type="application/ld+json">
-{"headline":"Uva 524 - Primes Ring","dateModified":"2020-05-28T00:00:00+03:00","datePublished":"2020-05-28T00:00:00+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/2020/05/Primes-Ring.html"},"url":"/2020/05/Primes-Ring.html","description":"My code:","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"Uva 524 - Primes Ring","dateModified":"2020-05-28T00:00:00+03:00","datePublished":"2020-05-28T00:00:00+03:00","url":"/2020/05/Primes-Ring.html","mainEntityOfPage":{"@type":"WebPage","@id":"/2020/05/Primes-Ring.html"},"description":"My code:","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="ML prog-blog" /></head>
 <body><header class="site-header">
@@ -55,16 +55,16 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody" style="display: flex;flex-direction: column;">
-    <span style='font-size:30px;font-weight:bold'>Problem statement:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Problem link:</span>
+    <a style='margin-bottom: 20px;' href=https://onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=465;>https://onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=465;</a>   
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Problem statement:</span>
     <p class="post-text">A ring is composed of n (even number) circles as shown in diagram.Put natural numbers1;2;:::;n into each circle separately, and the sum of numbers in two adjacent circles should be a prime.</p>
-    <span style='font-size:30px;font-weight:bold'>Input:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Input:</span>
     <p class="post-text">n (0 < n < 16) .</p>
-    <span style='font-size:30px;font-weight:bold'>Output:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Output:</span>
     <p class="post-text">The output format is shown as sample below. Each row represents a series of circle numbers in thering beginning from 1 clockwisely and anticlockwisely. The order of numbers must satisfy the above requirements.You are to write a program that completes above process.</p>
-    <span style='font-size:30px;font-weight:bold'>Explanation:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Explanation:</span>
     <p class="post-text">Considering the input size, this is a good case for using backtracking and simply trying all the possible pairs while mainting a vector of used numbers in the range for each observed case.So starting with 1,we simply try substracting 1 from every prime number until 31(because 15+16 are the biggest pair possible) and we check if the result of the substraction was not yet used,if it wasn't we just carry on with this current number and do the same process;</p>
-    <span style='font-size:30px;font-weight:bold'>Problem link:</span>
-    <a href=https://onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=465;>https://onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=465;</a>
     <p><span style="font-size:20px;font-weight:bold">My code:</span></p>
 
 <figure class="highlight"><pre><code class="language-c--" data-lang="c++"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1

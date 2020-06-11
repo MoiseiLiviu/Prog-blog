@@ -15,7 +15,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-29T00:00:00+03:00" />
 <script type="application/ld+json">
-{"headline":"Uva 10487 Closest Sums","dateModified":"2020-05-29T00:00:00+03:00","datePublished":"2020-05-29T00:00:00+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/2020/05/Closest-Sums.html"},"url":"/2020/05/Closest-Sums.html","description":"My code:","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"Uva 10487 Closest Sums","dateModified":"2020-05-29T00:00:00+03:00","datePublished":"2020-05-29T00:00:00+03:00","url":"/2020/05/Closest-Sums.html","mainEntityOfPage":{"@type":"WebPage","@id":"/2020/05/Closest-Sums.html"},"description":"My code:","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="ML prog-blog" /></head>
 <body><header class="site-header">
@@ -57,16 +57,16 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody" style="display: flex;flex-direction: column;">
-    <span style='font-size:30px;font-weight:bold'>Problem statement:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Problem link:</span>
+    <a style='margin-bottom: 20px;' href=https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&category=113&page=show_problem&problem=1428>https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&category=113&page=show_problem&problem=1428</a>   
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Problem statement:</span>
     <p class="post-text">Given is a set of integers and then a sequence of queries. A query gives you a number and asks to  find a sum of two distinct numbers from the set, which is closest to the query number.</p>
-    <span style='font-size:30px;font-weight:bold'>Input:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Input:</span>
     <p class="post-text">Input contains multiple cases.Each case starts with an integer n (1 < n < 1000), which indicates, how many numbers are in the set of integer. Next n lines contain n numbers. Of course there is only one number in a single line. The next line contains a positive integer m giving the number of queries, 0 < m < 25. The next m lines contain an integer of the query, one per line.Input is terminated by a case whose n= 0. Surely, this case needs no processing.</p>
-    <span style='font-size:30px;font-weight:bold'>Output:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Output:</span>
     <p class="post-text">Output should be organized as in the sample below. For each query output one line giving the query value and the closest sum in the format as in the sample. Inputs will be such that no ties will occur.</p>
-    <span style='font-size:30px;font-weight:bold'>Explanation:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Explanation:</span>
     <p class="post-text">Very simple problem, we just need to compute every possible pair from the set and compare for each pair the sum with the query value.</p>
-    <span style='font-size:30px;font-weight:bold'>Problem link:</span>
-    <a href=https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&category=113&page=show_problem&problem=1428>https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&category=113&page=show_problem&problem=1428</a>
     <p><span style="font-size:20px;font-weight:bold">My code:</span></p>
 
 <figure class="highlight"><pre><code class="language-c--" data-lang="c++"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1

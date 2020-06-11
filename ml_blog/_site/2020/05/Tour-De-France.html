@@ -15,7 +15,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-28T00:00:00+03:00" />
 <script type="application/ld+json">
-{"headline":"Uva 11242 Tour De France","dateModified":"2020-05-28T00:00:00+03:00","datePublished":"2020-05-28T00:00:00+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/2020/05/Tour-De-France.html"},"url":"/2020/05/Tour-De-France.html","description":"My code:","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"Uva 11242 Tour De France","dateModified":"2020-05-28T00:00:00+03:00","datePublished":"2020-05-28T00:00:00+03:00","url":"/2020/05/Tour-De-France.html","mainEntityOfPage":{"@type":"WebPage","@id":"/2020/05/Tour-De-France.html"},"description":"My code:","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="ML prog-blog" /></head>
 <body><header class="site-header">
@@ -55,16 +55,16 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody" style="display: flex;flex-direction: column;">
-    <span style='font-size:30px;font-weight:bold'>Problem statement:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Problem link:</span>
+    <a style='margin-bottom: 20px;' href=https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&problem=2183>https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&problem=2183</a>   
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Problem statement:</span>
     <p class="post-text">A racing bicycle is driven by a chain connecting two sprockets. Sprocketsare grouped into two clusters the front cluster (typically consisting of 2 or 3 sprockets) and the rear cluster (typically consisting of between 5 and 10 sprockets). At any time the chain connects one of the front sprockets to one of the rear sprockets.The drive ratio { the ratio of the angular velocity of the pedals to thatof the wheels { is the quotient n=m where n is the number of teeth on the rear sprocket and m is the number of teeth on the front sprocket. Two driver ratios d1 < d2 are adjacent if there is no other drive ratio d1 < d3 < d2.The spread between a pair of drive ratios d1 < d2 is their quotient:d2 = d1.You are to compute the maximum spread between two adjacent drive ratios achieved by a particularpair of front and rear clusters.</p>
-    <span style='font-size:30px;font-weight:bold'>Input:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Input:</span>
     <p class="post-text">Input consists of several test cases, followed by a line containing 0. Each test case is speci ed by the following input f the number of sprockets in the front cluster;•r the number of sprockets in the rear cluster f integers, each giving the number of teeth on one of the gears in the front cluster;r integers, each giving the number of teeth on one of the gears in the rear cluster.You may assume that no cluster has more than 10 sprockets and that no gear has fewer than 10 or more than 100 teeth.</p>
-    <span style='font-size:30px;font-weight:bold'>Output:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Output:</span>
     <p class="post-text">For each test case, output the maximum spread rounded to two decimal places.</p>
-    <span style='font-size:30px;font-weight:bold'>Explanation:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Explanation:</span>
     <p class="post-text">Easy problem solvable with 2 nested for loops one for iterating over the first cluster and second for the second respectively, thus forming pairs and computing the drive ratio for each pair and pushing this values into a vector.After we sort this vector to obtain the adjacency list of the ratios, and then we just find the maximum spread by iterating over this vector.</p>
-    <span style='font-size:30px;font-weight:bold'>Problem link:</span>
-    <a href=https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&problem=2183>https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&problem=2183</a>
     <p><span style="font-size:20px;font-weight:bold">My code:</span></p>
 
 <figure class="highlight"><pre><code class="language-c--" data-lang="c++"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1

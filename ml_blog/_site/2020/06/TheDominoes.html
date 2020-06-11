@@ -15,7 +15,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-06-04T00:00:00+03:00" />
 <script type="application/ld+json">
-{"headline":"10503 - The dominoes solitaire","dateModified":"2020-06-04T00:00:00+03:00","datePublished":"2020-06-04T00:00:00+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/2020/06/TheDominoes.html"},"url":"/2020/06/TheDominoes.html","description":"My code:","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"10503 - The dominoes solitaire","dateModified":"2020-06-04T00:00:00+03:00","datePublished":"2020-06-04T00:00:00+03:00","url":"/2020/06/TheDominoes.html","mainEntityOfPage":{"@type":"WebPage","@id":"/2020/06/TheDominoes.html"},"description":"My code:","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="ML prog-blog" /></head>
 <body><header class="site-header">
@@ -55,16 +55,16 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody" style="display: flex;flex-direction: column;">
-    <span style='font-size:30px;font-weight:bold'>Problem statement:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Problem link:</span>
+    <a style='margin-bottom: 20px;' href=https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&problem=1444>https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&problem=1444</a>   
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Problem statement:</span>
     <p class="post-text">A man used to play dominoes with some friends in a small town. Some families have left the town andat present the only residents in the town are the man and his wife. This man would like to continue playing dominoes, but his wife does not like plaing. He has invented a game to play alone. Two pieces are picked out and are put at the two extremes of a row with a number (n) of spaces. After that, other pieces (m) are picked out to fill the spaces. The number of pieces is greater than or equal to the number of spaces (m < n), and the number of pieces is less than or equal to 14 (m < 14). The spaces are filled by putting one piece in each space, according to the rules of dominoes :the number of adjacent dots on two different dominoes must coincide. Pieces with repeated values are placed in the same way as the other pieces, and not at right angels.The problem consists in the design of a program which, given a number of spaces (n), a number of pieces (m), the two initial pieces (i1; i2) and (d1; d2), and the m pieces (p1; q1), (p2; q2), . . . , (pm; qm),decides if it is possible to  fill the n spaces between the two initial pieces using the m pieces and with the rules of dominoes. For example, with n= 3,m= 4, initial pieces (0,1) and (3,4), and pieces (2,1),(5,6), (2,2) and (3,2), the answer is `YES', because there is a solution :(0,1), (1,2), (2,2), (2,3), (3,4).With n= 2,m= 4, pieces in the extremes (0,1) and (3,4), and (1,4), (4,4), (3,2) and (5,6), the answer is `NO'.</p>
-    <span style='font-size:30px;font-weight:bold'>Input:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Input:</span>
     <p class="post-text">The input will consist of a series of problems, with each problem described in a series of lines :in the rst line the number of spaces (n) is indicated, in the second line the number of pieces (m) used to  llthe spaces, in the next line the piece to be placed on the left, with the two values in the piece separated by a space and in the same way that the numbers appear in the row, in the following lines the piece tobe placed on the right, with the two values in the piece separated by a space and in the same way thatthe numbers appear in the row, and the other m pieces appear in consecutive lines, one in each line,with the two values separated by a space. Different problems appear in the input successively without separation, and the input  nishes when `0' appears as the number of spaces.</p>
-    <span style='font-size:30px;font-weight:bold'>Output:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Output:</span>
     <p class="post-text">For each problem in the input a line is written, with `YES' if the problem has a solution, and `NO' if ithas no solution.</p>
-    <span style='font-size:30px;font-weight:bold'>Explanation:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Explanation:</span>
     <p class="post-text">The problem is solvable with backtracking.Starting from the left domino piece we iterate over all the possible pieces that can be concatinated and for each of them do the same process until all the n places are filled, at that point we check if the last piece is compatible with the right extreme, if it is then set the 'possible' boolean to true;</p>
-    <span style='font-size:30px;font-weight:bold'>Problem link:</span>
-    <a href=https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&problem=1444>https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&problem=1444</a>
     <p><span style="font-size:20px;font-weight:bold">My code:</span></p>
 
 <figure class="highlight"><pre><code class="language-c--" data-lang="c++"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1

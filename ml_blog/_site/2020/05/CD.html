@@ -15,7 +15,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-28T00:00:00+03:00" />
 <script type="application/ld+json">
-{"headline":"Uva 624 CD","dateModified":"2020-05-28T00:00:00+03:00","datePublished":"2020-05-28T00:00:00+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/2020/05/CD.html"},"url":"/2020/05/CD.html","description":"My code:","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"Uva 624 CD","dateModified":"2020-05-28T00:00:00+03:00","datePublished":"2020-05-28T00:00:00+03:00","url":"/2020/05/CD.html","mainEntityOfPage":{"@type":"WebPage","@id":"/2020/05/CD.html"},"description":"My code:","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="ML prog-blog" /></head>
 <body><header class="site-header">
@@ -55,16 +55,16 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody" style="display: flex;flex-direction: column;">
-    <span style='font-size:30px;font-weight:bold'>Problem statement:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Problem link:</span>
+    <a style='margin-bottom: 20px;' href=https://onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=565>https://onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=565</a>   
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Problem statement:</span>
     <p class="post-text">You have a long drive by car ahead. You have a tape recorder, but unfortunately your best music is on CDs. You need to have it on tapes so the problem to solve is  you have a tape N minutes long. How to choose tracks from CD to get most out of tape space and have as short unused space as possible.Assumptions:•number of tracks on the CD does not exceed 20•no track is longer than N minutes•tracks do not repeat•length of each track is expressed as an integer number•N is also integer Program should find the set of tracks which fills the tape best and print it in the same sequence as the tracks are stored on the CD</p>
-    <span style='font-size:30px;font-weight:bold'>Input:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Input:</span>
     <p class="post-text">Any number of lines. Each one contains value N, (after space) number of tracks and durations of the tracks. For example from first line in sample data:N=5, number of tracks=3, first track lasts for 1 minute, second one 3 minutes, next one 4 minutes.</p>
-    <span style='font-size:30px;font-weight:bold'>Output:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Output:</span>
     <p class="post-text">Set of tracks (and durations) which are the correct solutions and string ‘sum:’ and sum of durationtimes.</p>
-    <span style='font-size:30px;font-weight:bold'>Explanation:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Explanation:</span>
     <p class="post-text">Similar problem to the notorious backpack problem, so the solutions is definetly recursive.We just need to explore all the possible subsets and find the maximum sum of their elements.The recursive aproach gives a 2^n complexity because for each element there are 2 cases One in which the element is added and one in which is not.We do this while maintaining a string of the appended elements and return the closest sum and the string in the form of a pair.</p>
-    <span style='font-size:30px;font-weight:bold'>Problem link:</span>
-    <a href=https://onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=565>https://onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=565</a>
     <p><span style="font-size:20px;font-weight:bold">My code:</span></p>
 
 <figure class="highlight"><pre><code class="language-c--" data-lang="c++"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1

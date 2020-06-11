@@ -15,7 +15,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-06-03T00:00:00+03:00" />
 <script type="application/ld+json">
-{"headline":"11991 - Easy Problem from Rujia Liu?","dateModified":"2020-06-03T00:00:00+03:00","datePublished":"2020-06-03T00:00:00+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/2020/06/Easy-Problem-From.html"},"url":"/2020/06/Easy-Problem-From.html","description":"My code:","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"11991 - Easy Problem from Rujia Liu?","dateModified":"2020-06-03T00:00:00+03:00","datePublished":"2020-06-03T00:00:00+03:00","url":"/2020/06/Easy-Problem-From.html","mainEntityOfPage":{"@type":"WebPage","@id":"/2020/06/Easy-Problem-From.html"},"description":"My code:","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="ML prog-blog" /></head>
 <body><header class="site-header">
@@ -55,16 +55,16 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody" style="display: flex;flex-direction: column;">
-    <span style='font-size:30px;font-weight:bold'>Problem statement:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Problem link:</span>
+    <a style='margin-bottom: 20px;' href=https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&problem=3142>https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&problem=3142</a>   
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Problem statement:</span>
     <p class="post-text">Though Rujia Liu usually sets hard problems for contests (for example, regional contests likeXi'an 2006, Beijing 2007 and Wuhan 2009, or UVa OJ contests like Rujia Liu's Presents 1and 2), he occasionally sets easy problem (for example, `the Coco-Cola Store' in UVa OJ),to encourage more people to solve his problems :D Given an array, your task is to find the k-th occurrence (from left to right) of an integer v. To make the problem more difficult (and interesting!), you'll have to answer m such queries.</p>
-    <span style='font-size:30px;font-weight:bold'>Input:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Input:</span>
     <p class="post-text">There are several test cases. The first line of each test case contains two integers n, m (1 <= n;m <= 100;000), the number of elements in the array, and the number of queries. The next line contains n positive integers not larger than 1,000,000. Each of the following m lines contains two integer k and v (1 < k < n, 1 <= v <= 1.000.000). The input is terminated by end-of-file (EOF).</p>
-    <span style='font-size:30px;font-weight:bold'>Output:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Output:</span>
     <p class="post-text">For each query, print the 1-based location of the occurrence. If there is no such element, output `0'instead.</p>
-    <span style='font-size:30px;font-weight:bold'>Explanation:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Explanation:</span>
     <p class="post-text">The input is to big to just iterate and mantain a counter for each querry, so a better way is maintaining the index for each encounter in a map where the key is a number from the array and the value is another map where the key is the k occurence of the number and the value is the coresponding index.So after reading the input we can fetch the indeces map[v][k].</p>
-    <span style='font-size:30px;font-weight:bold'>Problem link:</span>
-    <a href=https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&problem=3142>https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&problem=3142</a>
     <p><span style="font-size:20px;font-weight:bold">My code:</span></p>
 
 <figure class="highlight"><pre><code class="language-c--" data-lang="c++"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1

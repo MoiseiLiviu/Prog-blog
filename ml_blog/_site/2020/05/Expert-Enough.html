@@ -15,7 +15,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-14T00:00:00+03:00" />
 <script type="application/ld+json">
-{"headline":"Uva 1237 - Expert enough?","dateModified":"2020-05-14T00:00:00+03:00","datePublished":"2020-05-14T00:00:00+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/2020/05/Expert-Enough.html"},"url":"/2020/05/Expert-Enough.html","description":"My code:","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"Uva 1237 - Expert enough?","dateModified":"2020-05-14T00:00:00+03:00","datePublished":"2020-05-14T00:00:00+03:00","url":"/2020/05/Expert-Enough.html","mainEntityOfPage":{"@type":"WebPage","@id":"/2020/05/Expert-Enough.html"},"description":"My code:","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="ML prog-blog" /></head>
 <body><header class="site-header">
@@ -55,16 +55,16 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody" style="display: flex;flex-direction: column;">
-    <span style='font-size:30px;font-weight:bold'>Problem statement:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Problem link:</span>
+    <a style='margin-bottom: 20px;' href=https://onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=3678>https://onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=3678</a>   
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Problem statement:</span>
     <p class="post-text">Auto-mobile Charting & Manufacturing (ACM) is a company that specializes in manufacturing auto-mobile spare parts. Being one of the leading automotive companies in the world, ACM are sure to keepup the latest information in that world. In the 100-year anniversary of the company, ACM compiled a huge list of range of prices of any automobiles ever recorded in the history. ACM then wants to develop a program that they called Automobile Expert System or AES for short.The program receives a price P as an input, and searches through the database for a car maker in which P falls in their range of lowest price L and highest price H of car they ever made. The program then output the car maker name. If the database contains no or more than one car maker that satis esthe query, the program produce output `UNDETERMINED' (without quotes). Not so expert, huh? You are about to develop that program for ACM.</p>
-    <span style='font-size:30px;font-weight:bold'>Input:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Input:</span>
     <p class="post-text">The input begins with a line containing an integerT(T < 10), the number of test cases follow. Eachcase begins with the size of the database D (D < 10000). The next each ofDlines contains M,Land H(0 < L < H < 1000000) which are the name of the maker (contains no whitespace and will never exceeds 20 characters), the car's lowest price the maker ever made, and the car's highest price the maker ever made respectively. Then there is the number of query Q(Q < 1000) follows. Each ofthe next Q lines contains an integer P(0 < P < 1000000), the query price.</p>
-    <span style='font-size:30px;font-weight:bold'>Output:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Output:</span>
     <p class="post-text">Output for each query should be one line containing the name of the maker, or the string `UNDETERMINED'(without quotes) if there is no maker or more than one maker that satisfies the query. You should separate output for different case by one empty line.</p>
-    <span style='font-size:30px;font-weight:bold'>Explanation:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Explanation:</span>
     <p class="post-text">Considering that there are <=10000 companies names for maximum 10 test cases with 1000 companies, the complexity of simply looping through all the companies comes at 10^8 which is not ideal but viable for a 3 seconds time limit so using a vector<pair<string<int,int>>> is a way of solving this problem.</p>
-    <span style='font-size:30px;font-weight:bold'>Problem link:</span>
-    <a href=https://onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=3678>https://onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=3678</a>
     <p><span style="font-size:20px;font-weight:bold">My code:</span></p>
 
 <figure class="highlight"><pre><code class="language-c--" data-lang="c++"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1

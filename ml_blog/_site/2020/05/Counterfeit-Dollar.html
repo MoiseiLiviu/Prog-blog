@@ -15,7 +15,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-28T00:00:00+03:00" />
 <script type="application/ld+json">
-{"headline":"Uva 608 Counterfeit Dollar","dateModified":"2020-05-28T00:00:00+03:00","datePublished":"2020-05-28T00:00:00+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/2020/05/Counterfeit-Dollar.html"},"url":"/2020/05/Counterfeit-Dollar.html","description":"My code:","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"Uva 608 Counterfeit Dollar","dateModified":"2020-05-28T00:00:00+03:00","datePublished":"2020-05-28T00:00:00+03:00","url":"/2020/05/Counterfeit-Dollar.html","mainEntityOfPage":{"@type":"WebPage","@id":"/2020/05/Counterfeit-Dollar.html"},"description":"My code:","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="ML prog-blog" /></head>
 <body><header class="site-header">
@@ -55,16 +55,16 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody" style="display: flex;flex-direction: column;">
-    <span style='font-size:30px;font-weight:bold'>Problem statement:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Problem link:</span>
+    <a style='margin-bottom: 20px;' href=https://onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=549>https://onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=549</a>   
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Problem statement:</span>
     <p class="post-text">Sally Jones has a dozen Voyageur silver dollars. However, only eleven of the coins are true silver dollars; one coin is counterfeit even though its color and size make it indistinguishable from the real silver dollars. The counterfeit coin has a different weight from the other coins but Sally does not knowif it is heavier or lighter than the real coins.Happily, Sally has a friend who loans her a very accurate balance scale. The friend will permit Sally three weighings to find the counterfeit coin. For instance, if Sally weighs two coins against each other and the scales balance then she knows these two coins are true. Now if Sally weighs one of the true coins against a third coin and the scales do not balance then Sally knows the third coin is counterfeit and she can tell whether it is light or heavy depending on whether the balance on which it is placed goes up or down, respectively.By choosing her weighings carefully, Sally is able to ensure that she will find the counterfeit coin with exactly three weighings.</p>
-    <span style='font-size:30px;font-weight:bold'>Input:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Input:</span>
     <p class="post-text">The first line of input is an integer n (n>0) specifying the number of cases to follow. Each case consists of three lines of input, one for each weighing. Sally has identified each of the coins with the letters A–L. Information on a weighing will be given by two strings of letters and then one of the words“up”, “down”, or “even”. The first string of letters will represent the coins on the left balance; the second string, the coins on the right balance. (Sally will always place the same number of coins on the right balance as on the left balance.) The word in the third position will tell whether the right side ofthe balance goes up, down, or remains even.</p>
-    <span style='font-size:30px;font-weight:bold'>Output:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Output:</span>
     <p class="post-text">For each case, the output will identify the counterfeit coin by its letter and tell whether it is heavy orlight. The solution will always be uniquely determined.</p>
-    <span style='font-size:30px;font-weight:bold'>Explanation:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Explanation:</span>
     <p class="post-text">It's a tricky problem, but the solution is pretty trivial, we just simulate the process and the logic.For that we must come with an assumption for each coin given,if it's either heavy or light, suposse the coin is light and it's found in the left side first time then the left side is lighter and it must be up, in the second case it's in the right side so the ride side is up.It's a simple logical assumption that should be true for all the 3 cases if it's false at some point then the coin is normal and if the coin is found in a even case,it is again a normal coin, but if it goes through all the tests it is indeed conterfeit.</p>
-    <span style='font-size:30px;font-weight:bold'>Problem link:</span>
-    <a href=https://onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=549>https://onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=549</a>
     <p><span style="font-size:20px;font-weight:bold">My code:</span></p>
 
 <figure class="highlight"><pre><code class="language-c--" data-lang="c++"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1

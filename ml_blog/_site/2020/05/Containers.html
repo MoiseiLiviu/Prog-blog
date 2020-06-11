@@ -15,7 +15,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-26T00:00:00+03:00" />
 <script type="application/ld+json">
-{"headline":"Uva 1062 Containers","dateModified":"2020-05-26T00:00:00+03:00","datePublished":"2020-05-26T00:00:00+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/2020/05/Containers.html"},"url":"/2020/05/Containers.html","description":"My code:","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"Uva 1062 Containers","dateModified":"2020-05-26T00:00:00+03:00","datePublished":"2020-05-26T00:00:00+03:00","url":"/2020/05/Containers.html","mainEntityOfPage":{"@type":"WebPage","@id":"/2020/05/Containers.html"},"description":"My code:","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="ML prog-blog" /></head>
 <body><header class="site-header">
@@ -55,16 +55,16 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody" style="display: flex;flex-direction: column;">
-    <span style='font-size:30px;font-weight:bold'>Problem statement:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Problem link:</span>
+    <a style='margin-bottom: 20px;' href=https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&problem=3503>https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&problem=3503</a>   
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Problem statement:</span>
     <p class="post-text">A seaport container terminal stores large containers that are eventually loaded on seagoing ships for transport abroad. Containers coming to the terminal by road and rail are stacked at the terminal as they arrive.Seagoing ships carry large numbers of containers. The time to load a ship depends in part on the locations of its containers. The loading time increases when the containers are not on the top of the stacks, but can be fetched only after removing other containers that are on top of them.The container terminal needs a plan for stacking containers in order to decrease loading time.The plan must allow each ship to be loaded by accessing only topmost containers on the stacks, and minimizing the total number of stacks needed.For this problem, we know the order in which ships must be loaded and the order in which containers arrive. Each ship is represented by a capital letter between A and Z (inclusive), and the ships will beloaded in alphabetical order. Each container is labeled with a capital letter representing the ship onto which it needs to be loaded. There is no limit on the number of containers that can be placed in asingle stack.</p>
-    <span style='font-size:30px;font-weight:bold'>Input:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Input:</span>
     <p class="post-text">The input file contains multiple test cases. Each test case consists of a single line conOlderp A, then ship B, and so on.A line containing the word end follows the last test case.</p>
-    <span style='font-size:30px;font-weight:bold'>Output:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Output:</span>
     <p class="post-text">For each input case, print the case number (beginning with 1) and the minimum number of stacks needed to store the containers before loading starts. Your output format should be similar to the one shown here.</p>
-    <span style='font-size:30px;font-weight:bold'>Explanation:</span>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Explanation:</span>
     <p class="post-text">This problem can be solved by using disjoint sets as a custom data structure or use a lazy aproach as i did.For the container to be picked without any trouble it should be on top of its stack or be the only element of its stack,thus the only time we should create a new stack is when all the stacks have on top chars smaller than the given container.Ex if the tops are  'A','B','C' then container 'Z' should be placed in a new stack or otherwise it will block the others.If there is a smaller char container we choose the smallest stack top which is bigger than the giver container and we override this ending with the new character.</p>
-    <span style='font-size:30px;font-weight:bold'>Problem link:</span>
-    <a href=https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&problem=3503>https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&problem=3503</a>
     <p><span style="font-size:20px;font-weight:bold">My code:</span></p>
 
 <figure class="highlight"><pre><code class="language-c--" data-lang="c++"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
