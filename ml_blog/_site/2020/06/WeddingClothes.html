@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>11450 - Wedding shopping | ML prog-blog</title>
+<meta name="generator" content="Jekyll v4.1.0" />
+<meta property="og:title" content="11450 - Wedding shopping" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="My code:" />
+<meta property="og:description" content="My code:" />
+<link rel="canonical" href="/2020/06/WeddingClothes.html" />
+<meta property="og:url" content="/2020/06/WeddingClothes.html" />
+<meta property="og:site_name" content="ML prog-blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-06-11T00:00:00+03:00" />
+<script type="application/ld+json">
+{"headline":"11450 - Wedding shopping","dateModified":"2020-06-11T00:00:00+03:00","datePublished":"2020-06-11T00:00:00+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/2020/06/WeddingClothes.html"},"url":"/2020/06/WeddingClothes.html","description":"My code:","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="ML prog-blog" /></head>
+<body><header class="site-header">
+  <link rel="icon" type="image/gif" href="https://img.icons8.com/fluent/48/000000/source-code.png" />
+  <div class="wrapp"><a class="site-title" href="/"><img style="height: 32px;width: 32px;margin-right: 15px;" src="https://img.icons8.com/dusk/64/000000/hacker.png"/>ML prog-blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger" style="margin-right: 40px;">
+          
+            <a class="page-link" href="/about/">About</a>
+            <a class="page-link" href="/contact/">Contact</a>
+            <a class="page-link" href="https://github.com/MoiseiLiviu?tab=repositories">Latest projects</a>
+            <a class="page-link" href="/categories/">Categories</a>
+        </div>
+      </nav></div>
+</header>
+
+<link rel="stylesheet" type="text/css" href="/css/style.css"><main class="page-content" aria-label="Content">
+      <div class="contents" style="margin-left: auto;margin-right: auto;">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting" style="margin-top: 100px;">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" style="margin-left: auto;margin-right: auto;margin-bottom: 15px;" itemprop="name headline">11450 - Wedding shopping</h1>
+    
+    <a href="/categories/Dynamic_Programming" style="padding: 8px;background-color: whitesmoke;border-radius: 3px;margin-right: 15px;">Dynamic_Programming</a>
+    
+    <p class="post-meta" style="margin-top: 20px;"><time class="dt-published" datetime="2020-06-11T00:00:00+03:00" itemprop="datePublished">
+        Jun 11, 2020
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody" style="display: flex;flex-direction: column;">
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Problem link:</span>
+    <a style='margin-bottom: 20px;' href=https://onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=2445>https://onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=2445</a>   
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Problem statement:</span>
+    <p class="post-text">One of our best friends is getting married and weall are nervous because he is the first of us who is doing something similar. In fact, we have never assisted to a wedding, so we have no clothes or accessories, and to solve the problem we are going to a famous department store of our city to buy all we need :a shirt, a belt, some shoes, a tie, etcetera.We are offered different models for each class of garment (for example, three shirts, two belts,four shoes, ...). We have to buy one model of each class of garment, and just one.As our budget is limited, we cannot spend more money than it, but we want to spend the maximum possible. It's possible that we cannot buy one model of each class of garment due to the short amountof money we have.</p>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Input:</span>
+    <p class="post-text">The first line of the input contains an integer,N, indicating the number of test cases. For each test case,some lines appear, the first one contains two integers,M and C, separated by blanks (1 <= M <= 200,and 1 <= C <= 20), where M is the available amount of money and C is the number of garments you have to buy. Following this line, there are C lines, each one with some integers separated by blanks; in each of these lines the first integer,K(1 <= K <= 20), indicates the number of different models for each garment and it is followed by K integers indicating the price of each model of that garment.</p>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Output:</span>
+    <p class="post-text">For each test case, the output should consist of one integer indicating the maximum amount of money necessary to buy one element of each garment without exceeding the initial amount of money. If there is no solution, you must print `no solution'.</p>
+    <span style='font-size:30px;font-weight:bold;margin-bottom: 12px;'>Explanation:</span>
+    <p class="post-text">Considering that we should pick one element from each garment, to compute every possible combination of clothes we need 20^20 as there can be maximum 20 elements per 20 garments which is way too much.During the complete search there are many overlapping problems :starting from the first garment we should achieve the last one and not run out of money, but during the process of selection we can observe that there are many ways of achieving some gorment i with M money left by picking different elements altoghether.This means that most often we compute the same values again and again, so to stop doing that we should preserve a state, a matrix[money][g].This assures that every possible scenario(money/garment) is computed only once so the worst complexity becomes 200*20=40000.The backtraking part of the problem is simple and requires no explanation, we just return the max amount of money that can be spent if a given element of garment is chosen.</p>
+    <p><span style="font-size:20px;font-weight:bold">My code:</span></p>
+
+<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+</pre></td><td class="code"><pre><span class="cp">#include &lt;bits/stdc++.h&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="n">M</span><span class="p">,</span><span class="n">C</span><span class="p">,</span><span class="n">N</span><span class="p">,</span><span class="n">memo</span><span class="p">[</span><span class="mi">210</span><span class="p">][</span><span class="mi">25</span><span class="p">],</span>
+        <span class="n">price</span><span class="p">[</span><span class="mi">25</span><span class="p">][</span><span class="mi">25</span><span class="p">];</span>
+
+<span class="kt">int</span> <span class="nf">backtracking</span><span class="p">(</span><span class="kt">int</span> <span class="n">money</span><span class="p">,</span><span class="kt">int</span> <span class="n">g</span><span class="p">){</span>
+	
+	<span class="k">if</span><span class="p">(</span><span class="n">money</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span><span class="k">return</span> <span class="o">-</span><span class="mi">1000000</span><span class="p">;</span>
+	<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">g</span><span class="o">==</span><span class="n">C</span><span class="p">)</span><span class="k">return</span> <span class="n">M</span><span class="o">-</span><span class="n">money</span><span class="p">;</span>
+	<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">memo</span><span class="p">[</span><span class="n">money</span><span class="p">][</span><span class="n">g</span><span class="p">]</span><span class="o">!=-</span><span class="mi">1</span><span class="p">)</span><span class="k">return</span> <span class="n">memo</span><span class="p">[</span><span class="n">money</span><span class="p">][</span><span class="n">g</span><span class="p">];</span>
+	<span class="k">else</span><span class="p">{</span>
+		<span class="kt">int</span> <span class="n">ans</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+		<span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">price</span><span class="p">[</span><span class="n">g</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+			<span class="n">ans</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">ans</span><span class="p">,</span><span class="n">backtracking</span><span class="p">(</span><span class="n">money</span><span class="o">-</span><span class="n">price</span><span class="p">[</span><span class="n">g</span><span class="p">][</span><span class="n">i</span><span class="p">],</span><span class="n">g</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
+			<span class="p">}</span>
+			<span class="k">return</span> <span class="n">memo</span><span class="p">[</span><span class="n">money</span><span class="p">][</span><span class="n">g</span><span class="p">]</span> <span class="o">=</span> <span class="n">ans</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">N</span><span class="p">;</span>
+	<span class="k">while</span><span class="p">(</span><span class="n">N</span><span class="o">--</span><span class="p">){</span>
+		<span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">M</span><span class="o">&gt;&gt;</span><span class="n">C</span><span class="p">;</span>
+		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">C</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+			<span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">price</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span>
+			<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;=</span><span class="n">price</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+				<span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">price</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
+				<span class="p">}</span>
+			<span class="p">}</span>
+			<span class="n">memset</span><span class="p">(</span><span class="n">memo</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="k">sizeof</span> <span class="n">memo</span><span class="p">);</span>
+			<span class="kt">int</span> <span class="n">score</span> <span class="o">=</span> <span class="n">backtracking</span><span class="p">(</span><span class="n">M</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+			<span class="k">if</span><span class="p">(</span><span class="n">score</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"no solution"</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+			<span class="k">else</span> <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">score</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+		<span class="p">}</span>
+	
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+
+  </div><a class="u-url" href="/2020/06/WeddingClothes.html" hidden></a>
+</article>
+<link href="/css/style.css" rel="stylesheet" >
+      </div>
+    </main><footer id="footer">
+    <p>Copyright &copy; 2020 <a href="/">ML prog-blog</a> &nbsp;
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+            <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"/>
+        </a>
+    </p>
+    <p>Powered by
+        <a href="https://github.com/jekyll/jekyll">Jekyll</a> 
+    </p>
+    <p>Last updated 2020/05/30</p>
+    <p id="footer-social-links">
+        <a href="">
+            <span class="px-2 fab fa-lg fa-twitter"></span>
+        </a>
+        <a href="">
+            <span class="px-2 fab fa-lg fa-github"></span>
+        </a>
+        <a href="">
+            <span class="px-2 fab fa-lg fa-linkedin"></span>
+        </a>
+    </p>
+</footer></body>
+
+</html>
